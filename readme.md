@@ -8,7 +8,7 @@ The goal is to find a short path through the state space to the state where all 
 It has been proven that any cube state can be solved in 26 moves or fewer.<br><br>
 
 ## Solving the Cube with a Neural Network
-To solve the cube using neural networks, one can apply an A*-search algorithm with the neural network's output as a heuristic. This approach was proposted in the paper "Solving the Rubik's Cube with approximate policy iteration."<br>
+To solve the cube using neural networks, one can apply an A*-search algorithm with the neural network's output as a heuristic.
 The A*-Algorithm is often used to find shortest ways, for example for pathfinding in computer games. In a searching loop, it prioritizes states, which seem to be promising, for example if they have a low euclidian distance to the target. This distance estimate is called the heuristic which the algorithm heavily relies on.<br>
 For solving the Rubik's Cube, the heuristic is given by the neural network. It tries to guess the number of moves/edges which are necessary to reach the solved state s0. With a perfectly trained network it would be fairly easy to solve the cube using the A*-Algorithm. However, difficulties arise:
 * The network can only be trained on a fraction of all possible cube states.
