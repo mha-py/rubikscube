@@ -60,4 +60,4 @@ The network was tested on cubes which were scrambled by 1000 moves.
 * Mean number of nodes visited: 1451.0
 * Median number of nodes visited: 3280.5
 
-<img src="images/solving_time.png">
+<img src="solving_time.png">
