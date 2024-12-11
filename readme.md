@@ -34,7 +34,7 @@ n(S0) <- 0
 net_teacher.weights <- exp_avg(net.weights)
 ```
 When solving the cube with an A*-algorithm, a second problem arises. The algorithm often gets stuck in states that appear to be close to the solved state but actually are not. This situation is analogous to navigating a maze: a pathfinding algorithm might identify locations that seem near the goal in terms of Euclidean distance, but they are far away when obstacles (walls) are considered.<br>
-The following image shows a cube state S which gets a prediction net(S) = 9 moves, while the actual amount of moves to reach S0 is ~ 18.
+The following image shows a cube state S which gets a prediction net(S) = 9 moves, while the actual amount of moves to reach S0 is ~ 18.<br>
 <img src="stuckstates_9_18.png" width="300px"><br>
 One trick that significantly accelerated the training process for me was solving the cube (in a straightforward manner) during the network's training. This approach helps identify states that appear close to the solution but are, in reality, far from it. The network learns to distinguish between truly near-solution states and these "pseudo-solution" states.
 ```
